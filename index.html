@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IVACON — Seguridad Privada</title>
+  <meta name="description" content="Especialistas en seguridad privada con más de 40 años de experiencia. Guardias, Escoltas Tácticos y Custodia en toda la República Mexicana.">
+  <meta name="keywords" content="Guardias, Escoltas, Custodia, Seguridad Privada, Seguridad Comercial, Ciudad de México">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo">
+        <img src="assets/img/logo.png" alt="IVACON" class="logo-img">
+      </a>
+
+      <nav class="nav-main" id="nav-main">
+        <ul>
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li class="has-dropdown">
+            <a href="servicios.html" class="nav-link nav-dropdown-trigger">
+              Servicios
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <div class="dropdown">
+              <a href="servicios.html#guardias-intramuros" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                Guardias Intramuros
+              </a>
+              <a href="servicios.html#guardias-intramuros" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                </span>
+                Seguridad Perimetral
+              </a>
+              <a href="servicios.html#seguridad-perimetral" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                </span>
+                Monitoreo y Seguimiento
+              </a>
+              <a href="servicios.html#analisis-gestion-riesgos" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                </span>
+                Análisis y Gestión de Riesgos
+              </a>
+              <a href="servicios.html#consultoria" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </span>
+                Consultoría
+              </a>
+              <a href="servicios.html#capacitacion" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </span>
+                Capacitación
+              </a>
+              <a href="servicios.html#hospitalario-residencial" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+                </span>
+                Especialización Hospitalaria y Residencial
+              </a>
+            </div>
+          </li>
+          <li><a href="#mision" class="nav-link">Misión</a></li>
+          <li><a href="#ventas" class="nav-link">Ventas</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contacto" class="btn-header-cta">Solicitar Servicio</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="inicio" class="hero">
+
+    <!-- 1. IMAGE BACKGROUND — parallax wrapper -->
+    <div class="hero-vbg" id="hero-vbg" aria-hidden="true">
+      <img src="assets/images/hero-bg.png" alt="" class="hero-bg-img" draggable="false">
+    </div>
+
+    <!-- 2. OVERLAY STACK — gradient depth layers -->
+    <div class="hero-overlays" aria-hidden="true">
+      <div class="hero-ov hero-ov--left"></div>
+      <div class="hero-ov hero-ov--top"></div>
+      <div class="hero-ov hero-ov--bottom"></div>
+      <div class="hero-ov hero-ov--vignette"></div>
+    </div>
+
+    <!-- 3. CANVAS — subtle particle network -->
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- 4. MAIN CONTENT -->
+    <div class="hero-inner">
+
+      <div class="hero-eyebrow">
+        <span class="eyebrow-ping"></span>
+        <span>Disponibilidad Inmediata &mdash; CDMX y República</span>
+      </div>
+
+      <h1 class="hero-h1">
+        <span class="h1-line h1-line--1">Seguridad privada</span>
+        <span class="h1-line h1-line--2">profesional en <span class="h1-rotate-wrap"><span class="h1-rotate h1-gold" id="h1-rotate">empresas</span></span></span>
+      </h1>
+
+      <p class="hero-body">
+        Más de 40 años protegiendo personas, instalaciones y activos críticos en México. Personal certificado, investigado y registrado ante la Secretaría de Seguridad Pública Federal.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#servicios" class="cta-primary">
+          Ver Servicios
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#contacto" class="cta-secondary">Solicitar Cotización</a>
+      </div>
+
+      <!-- COUNTERS — animated on enter viewport -->
+      <div class="hero-metrics">
+        <div class="metric">
+          <span class="metric-val">
+            <span class="stat-num" data-count="40">0</span><span class="metric-sfx">+</span>
+          </span>
+          <span class="metric-label">Años de Experiencia</span>
+        </div>
+        <div class="metric-sep"></div>
+        <div class="metric">
+          <span class="metric-val">
+            <span class="stat-num" data-count="24">0</span><span class="metric-sfx">/7</span>
+          </span>
+          <span class="metric-label">Operación Continua</span>
+        </div>
+        <div class="metric-sep"></div>
+        <div class="metric">
+          <span class="metric-val">
+            <span class="stat-num" data-count="100">0</span><span class="metric-sfx">%</span>
+          </span>
+          <span class="metric-label">Personal Certificado</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4b. HERO RIGHT — Abstract security composition -->
+    <div class="hero-right" id="hero-right" aria-hidden="true">
+
+      <!-- Glass panel background -->
+      <div class="hr-glass"></div>
+
+      <!-- Floating wrapper — CSS animation -->
+      <div class="hr-float">
+
+        <!-- Layer A: outer orbit (slowest parallax depth) -->
+        <div class="hr-parallax" id="hr-layer-a">
+          <div class="hr-ring hr-ring--outer"></div>
+          <div class="hr-node hr-node--1"></div>
+          <div class="hr-node hr-node--2"></div>
+          <div class="hr-node hr-node--3"></div>
+        </div>
+
+        <!-- Layer B: mid ring + radar sweep + lines (medium depth) -->
+        <div class="hr-parallax" id="hr-layer-b">
+          <div class="hr-ring hr-ring--mid"></div>
+          <div class="hr-scan"></div>
+          <svg class="hr-lines" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="220" y1="220" x2="404" y2="67"  stroke="rgba(158,135,0,0.22)" stroke-width="0.8" stroke-dasharray="4 7"/>
+            <line x1="220" y1="220" x2="27"  y2="300" stroke="rgba(158,135,0,0.22)" stroke-width="0.8" stroke-dasharray="4 7"/>
+            <line x1="220" y1="220" x2="360" y2="369" stroke="rgba(158,135,0,0.22)" stroke-width="0.8" stroke-dasharray="4 7"/>
+          </svg>
+        </div>
+
+        <!-- Layer C: inner ring + core nucleus (fastest depth) -->
+        <div class="hr-parallax" id="hr-layer-c">
+          <div class="hr-ring hr-ring--inner"></div>
+          <div class="hr-core">
+            <div class="hr-core-ring"></div>
+            <div class="hr-core-dot"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Data tags -->
+      <div class="hr-tag hr-tag--1"><span class="hr-tag-dot"></span><span>Análisis constante del entorno</span></div>
+      <div class="hr-tag hr-tag--2"><span class="hr-tag-dot"></span><span>Prevención de incidentes</span></div>
+      <div class="hr-tag hr-tag--3"><span class="hr-tag-dot"></span><span>Acción inmediata en campo</span></div>
+
+    </div>
+
+    <!-- 5. STATUS CHIP — top-right floating -->
+    <div class="hero-status-chip">
+      <span class="hvc-dot hvc-dot--active"></span>
+      <div class="hvc-info">
+        <span class="hvc-val">Seguridad que anticipa</span>
+      </div>
+    </div>
+
+    <!-- 6. SCROLL CUE -->
+    <div class="scroll-cue">
+      <div class="scroll-cue-line"></div>
+      <span>Scroll</span>
+    </div>
+
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Guardias de Seguridad</span>
+      <span class="marquee-dot">·</span>
+      <span>Escoltas Tácticos</span>
+      <span class="marquee-dot">·</span>
+      <span>Custodia</span>
+      <span class="marquee-dot">·</span>
+      <span>Seguridad Perimetral</span>
+      <span class="marquee-dot">·</span>
+      <span>Protección VIP</span>
+      <span class="marquee-dot">·</span>
+      <span>Disponibilidad Inmediata</span>
+      <span class="marquee-dot">·</span>
+      <span>Personal Certificado</span>
+      <span class="marquee-dot">·</span>
+      <span>Cobertura Nacional</span>
+      <span class="marquee-dot">·</span>
+
+      <span>Guardias de Seguridad</span>
+      <span class="marquee-dot">·</span>
+      <span>Escoltas Tácticos</span>
+      <span class="marquee-dot">·</span>
+      <span>Custodia</span>
+      <span class="marquee-dot">·</span>
+      <span>Seguridad Perimetral</span>
+      <span class="marquee-dot">·</span>
+      <span>Protección VIP</span>
+      <span class="marquee-dot">·</span>
+      <span>Disponibilidad Inmediata</span>
+      <span class="marquee-dot">·</span>
+      <span>Personal Certificado</span>
+      <span class="marquee-dot">·</span>
+      <span>Cobertura Nacional</span>
+      <span class="marquee-dot">·</span>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="nosotros" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-main reveal-left">
+            <img src="assets/images/about/about-main.jpg" alt="Centro de Control IVACON" loading="lazy">
+          </div>
+          <div class="about-img-accent reveal-left" data-delay="150">
+            <img src="assets/images/about/about-detail.jpg" alt="Monitoreo de seguridad" loading="lazy">
+          </div>
+          <div class="about-permit-badge reveal-fade" data-delay="300">
+            <div class="about-permit-badge-inner">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+              <span>Permiso de Funcionamiento y Registro Federal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-label reveal-fade">Quiénes Somos</div>
+          <h2 class="section-title reveal-up">Expertos con más de<br><span class="gold">40 años</span> en el campo</h2>
+          <p class="body-text reveal-fade" data-delay="100">
+            Los socios y directivos de IVACON cuentan con una amplia experiencia de más de 40 años en Seguridad Pública y Privada Integral, en la modalidad de Intramuros y Extramuros, tanto en el sector público como en el privado.
+          </p>
+          <p class="body-text reveal-fade" data-delay="200">
+            Contamos con Permiso de Funcionamiento y Registro Federal y todos los registros requeridos por las autoridades correspondientes, con cobertura para toda la Ciudad de México, área metropolitana y Estados en el Interior de la República Mexicana.
+          </p>
+          <p class="body-text reveal-fade" data-delay="300">
+            Nuestro personal cuenta con todas sus prestaciones de ley, es investigado y registrado ante la Secretaría de Seguridad Pública Federal, y pasa por rigurosos exámenes médicos, físicos y psicométricos para garantizar solo los mejores elementos.
+          </p>
+          <div class="about-pillars reveal-fade" data-delay="400">
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+              </div>
+              <span>Fortaleza</span>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <span>Lealtad</span>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M5 6l1.5 9h11L19 6"/>
+                  <path d="M8 15a4 4 0 0 0 8 0"/>
+                </svg>
+              </div>
+              <span>Responsabilidad</span>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <span>Honradez</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES PREVIEW ============ -->
+  <section id="servicios" class="services-preview">
+    <div class="container">
+      <div class="svp-header">
+        <div>
+          <div class="section-label reveal-fade">Nuestros Servicios</div>
+          <h2 class="section-title reveal-up">Soluciones de seguridad<br>para cada entorno</h2>
+        </div>
+        <div class="svp-header-right reveal-fade" data-delay="100">
+          <p class="svp-desc">
+            Protección estratégica, operativa y tecnológica diseñada para responder con precisión a las necesidades de cada inmueble, empresa o espacio sensible.
+          </p>
+          <a href="servicios.html" class="btn-svp-all">
+            Ver todos los servicios
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="svp-grid reveal-fade" data-delay="150">
+        <a href="servicios.html#guardias-intramuros" class="svc-card svc-card--tall">
+          <div class="svc-card-img">
+            <img src="assets/images/services/guardias-intramuros.png" alt="Guardias Intramuros" loading="lazy">
+          </div>
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-body">
+            <span class="svc-card-num">01</span>
+            <h3 class="svc-card-title">Guardias<br>Intramuros</h3>
+            <span class="svc-card-arrow" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="servicios.html#seguridad-perimetral" class="svc-card svc-card--tall">
+          <div class="svc-card-img">
+            <img src="assets/images/services/seguridad-perimetral.jpg" alt="Seguridad Perimetral" loading="lazy">
+          </div>
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-body">
+            <span class="svc-card-num">02</span>
+            <h3 class="svc-card-title">Seguridad<br>Perimetral</h3>
+            <span class="svc-card-arrow" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="servicios.html#monitoreo-seguimiento" class="svc-card">
+          <div class="svc-card-img">
+            <img src="assets/images/services/monitoreo-seguimiento.jpg" alt="Monitoreo y Seguimiento" loading="lazy">
+          </div>
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-body">
+            <span class="svc-card-num">03</span>
+            <h3 class="svc-card-title">Monitoreo y<br>Seguimiento</h3>
+            <span class="svc-card-arrow" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="servicios.html#analisis-gestion-riesgos" class="svc-card">
+          <div class="svc-card-img">
+            <img src="assets/images/services/analisis-gestion-riesgos.jpg" alt="Análisis y Gestión de Riesgos" loading="lazy">
+          </div>
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-body">
+            <span class="svc-card-num">04</span>
+            <h3 class="svc-card-title">Análisis y Gestión<br>de Riesgos</h3>
+            <span class="svc-card-arrow" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a href="servicios.html#hospitalario-residencial" class="svc-card">
+          <div class="svc-card-img">
+            <img src="assets/images/services/hospitalario-residencial.jpg" alt="Especialización Hospitalaria y Residencial" loading="lazy">
+          </div>
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-body">
+            <span class="svc-card-num">07</span>
+            <h3 class="svc-card-title">Especialización<br>Hospitalaria y Residencial</h3>
+            <span class="svc-card-arrow" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MISSION & VISION ============ -->
+  <section id="mision" class="mv-section">
+    <div class="mv-grid">
+      <div class="mv-card mv-card--mission reveal-left">
+        <div class="mv-img-wrap">
+          <img src="./assets/img/mision.png" alt="Misión IVACON">
+          <div class="mv-img-overlay"></div>
+        </div>
+        <div class="mv-card-content">
+          <div class="mv-label">01 — Misión</div>
+          <h3 class="mv-title">Seguridad que<br>genera confianza</h3>
+          <p class="mv-text">
+            Proporcionar servicios de seguridad de manera integral con fortaleza, lealtad, honradez y responsabilidad, así como el uso de tecnologías de vanguardia, que garanticen tranquilidad de acuerdo a sus necesidades, con inteligencia, valor y confianza.
+          </p>
+          <p class="mv-text">
+            Brindar resultados efectivos a nuestros clientes con el objetivo de lograr un servicio completamente satisfactorio.
+          </p>
+        </div>
+      </div>
+
+      <div class="mv-card mv-card--vision reveal-right" data-delay="150">
+        <div class="mv-img-wrap">
+          <img src="./assets/img/vision.png" alt="Visión IVACON">
+          <div class="mv-img-overlay"></div>
+        </div>
+        <div class="mv-card-content">
+          <div class="mv-label">02 — Visión</div>
+          <h3 class="mv-title">El nuevo estándar<br>de seguridad</h3>
+          <p class="mv-text">
+            Crear un nuevo estándar de seguridad en México, que nos posicione dentro de las mejores empresas a nivel nacional, con la mayor calidad y avance tecnológico.
+          </p>
+          <p class="mv-text">
+            Continuar otorgando seguridad y satisfacción a nuestros clientes, con la capacitación continua de nuestro personal y de los elementos tecnológicos auxiliares.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY IVACON ============ -->
+  <section class="why-section" id="por-que">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-left">
+          <div class="section-label reveal-fade">Por qué IVACON</div>
+          <h2 class="section-title reveal-up">Personal altamente<br><span class="gold">capacitado</span></h2>
+          <p class="body-text reveal-fade" data-delay="100">
+            Cada elemento de nuestro equipo pasa por un riguroso proceso de selección y capacitación continua. Trabajamos con los mejores para proteger lo que más le importa.
+          </p>
+          <a href="#contacto" class="btn-primary reveal-fade" data-delay="200">
+            Hablar con un experto
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="why-right">
+          <div class="why-items">
+            <div class="why-item reveal-right" data-delay="0">
+              <div class="why-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Permiso Federal Vigente</h4>
+                <p>Registrados y autorizados ante la Secretaría de Seguridad Pública Federal.</p>
+              </div>
+            </div>
+            <div class="why-item reveal-right" data-delay="80">
+              <div class="why-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Personal con Prestaciones de Ley</h4>
+                <p>Todos nuestros elementos cuentan con IMSS, seguro de vida y beneficios completos.</p>
+              </div>
+            </div>
+            <div class="why-item reveal-right" data-delay="160">
+              <div class="why-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Investigación de Antecedentes</h4>
+                <p>Cada elemento es exhaustivamente investigado antes de integrarse a nuestro equipo.</p>
+              </div>
+            </div>
+            <div class="why-item reveal-right" data-delay="240">
+              <div class="why-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Respuesta Inmediata</h4>
+                <p>Disponibilidad 24/7 con tiempos de respuesta optimizados para cualquier situación.</p>
+              </div>
+            </div>
+            <div class="why-item reveal-right" data-delay="320">
+              <div class="why-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Cobertura Nacional</h4>
+                <p>CDMX, área metropolitana y estados en el interior de la República Mexicana.</p>
+              </div>
+            </div>
+            <div class="why-item reveal-right" data-delay="400">
+              <div class="why-item-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <div>
+                <h4>Tecnología de Vanguardia</h4>
+                <p>Integramos sistemas modernos de monitoreo y comunicación en todos nuestros servicios.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICACIONES ============ -->
+  <section id="certificaciones" class="cert-section">
+    <div class="container">
+
+      <div class="cert-header reveal-up">
+        <div class="section-label">Legalidad &amp; Confianza</div>
+        <h2 class="section-title">Cumplimiento legal y <span class="gold">certificaciones</span></h2>
+        <p class="body-text">IVACON opera bajo estándares regulatorios y afiliaciones que respaldan la legalidad, confianza y solidez de cada servicio.</p>
+      </div>
+
+      <div class="cert-grid">
+
+        <!-- REPSE -->
+        <div class="cert-card reveal-up" data-cert="repse" data-delay="50">
+          <div class="cert-sweep"></div>
+          <div class="cert-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <span class="cert-badge">REPSE</span>
+          <h3 class="cert-title">REPSE</h3>
+          <p class="cert-desc">Registro vigente que respalda la operación formal y regulada de nuestros servicios especializados.</p>
+          <div class="cert-link-slot" aria-hidden="true"></div>
+        </div>
+
+        <!-- AMESP -->
+        <a href="assets/docs/amesp.JPEG" target="_blank" rel="noopener" class="cert-card cert-card--link reveal-up" data-cert="amesp" data-delay="130">
+          <div class="cert-sweep"></div>
+          <div class="cert-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              <line x1="12" y1="12" x2="12" y2="16"/>
+              <line x1="10" y1="14" x2="14" y2="14"/>
+            </svg>
+          </div>
+          <span class="cert-badge">AMESP</span>
+          <h3 class="cert-title">AMESP</h3>
+          <p class="cert-desc">Afiliación a organismo reconocido del sector, reforzando confianza, respaldo institucional y buenas prácticas.</p>
+          <div class="cert-link-slot" aria-hidden="true"></div>
+        </a>
+
+        <!-- Permiso Federal -->
+        <div class="cert-card reveal-up" data-cert="federal" data-delay="210">
+          <div class="cert-sweep"></div>
+          <div class="cert-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <span class="cert-badge">Federal</span>
+          <h3 class="cert-title">Permiso Federal</h3>
+          <p class="cert-desc">Autorización para operar servicios de seguridad privada con apego a lineamientos y normativas aplicables.</p>
+          <div class="cert-link-slot" aria-hidden="true"></div>
+        </div>
+
+        <!-- Permisos Estatales -->
+        <div class="cert-card reveal-up" data-cert="estatales" data-delay="290">
+          <div class="cert-sweep"></div>
+          <div class="cert-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <span class="cert-badge">Estatal</span>
+          <h3 class="cert-title">Permisos Estatales</h3>
+          <p class="cert-desc">Cobertura con permisos en Chiapas y Nayarit, fortaleciendo la operación legal en entidades estratégicas.</p>
+          <div class="cert-link-slot" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VENTAS BANNER ============ -->
+  <section id="ventas" class="ventas-banner">
+    <div class="container">
+      <div class="ventas-inner">
+        <div class="ventas-content">
+          <div class="section-label reveal-fade" style="color: rgba(254,254,254,0.5);">Área Comercial</div>
+          <h2 class="ventas-title reveal-up" data-delay="80">¿Listo para proteger<br>lo que más importa?</h2>
+          <p class="reveal-fade" data-delay="200">Contáctenos para recibir una cotización personalizada sin costo. Nuestro equipo de ventas está disponible para diseñar el plan de seguridad ideal para su empresa o proyecto.</p>
+        </div>
+        <div class="ventas-actions reveal-fade" data-delay="300">
+          <a href="tel:+525500000000" class="btn-ventas-phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            Llamar Ahora
+          </a>
+          <a href="#contacto" class="btn-ventas-form">Enviar Solicitud</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label reveal-fade">Contacto</div>
+          <h2 class="section-title reveal-up">Hablemos de<br>su seguridad</h2>
+          <p class="body-text reveal-fade" data-delay="100">
+            Nuestro equipo está disponible para analizar sus necesidades y proponer la solución de seguridad más adecuada. Sin compromisos.
+          </p>
+          <div class="contact-details reveal-fade" data-delay="200">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Oficinas</strong>
+                <span>Ciudad de México, México</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Horario de Atención</strong>
+                <span>Lunes a Viernes 8:00 — 18:00</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Emergencias 24/7</strong>
+                <span>Línea directa disponible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Carlos Mendoza" autocomplete="name" required>
+                <span class="form-error" id="nombre-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nombre de su empresa" autocomplete="organization">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="correo@empresa.com" autocomplete="email" required>
+                <span class="form-error" id="email-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+52 55 0000 0000" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="servicio">Servicio de interés</label>
+              <select id="servicio" name="servicio">
+                <option value="">Seleccionar servicio</option>
+                <option value="guardias">Guardias de Seguridad</option>
+                <option value="escoltas">Escoltas Tácticos</option>
+                <option value="custodia">Custodia</option>
+                <option value="otro">Consulta General</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describa brevemente sus necesidades de seguridad..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="btn-submit">
+              <span class="btn-submit-text">Enviar Solicitud</span>
+              <span class="btn-submit-loading" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin-icon">
+                  <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                </svg>
+              </span>
+              <span class="btn-submit-done" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+                Enviado
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#inicio" class="logo logo--footer">
+            <img src="assets/img/logo.png" alt="IVACON" class="footer-logo-img">
+          </a>
+          <p class="footer-desc">
+            Especialistas en seguridad privada integral. Más de 40 años protegiendo personas, empresas e instituciones en México.
+          </p>
+          <div class="footer-contact-info">
+            <div class="footer-contact-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>55 5084 1438 &nbsp;·&nbsp; 55 2766 1167 &nbsp;·&nbsp; 55 2274 3855</span>
+            </div>
+            <div class="footer-contact-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:contacto@ps-bc.com.mx">contacto@ps-bc.com.mx</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Servicios</h5>
+            <ul>
+              <li><a href="servicios.html#guardias-intramuros">Guardias Intramuros</a></li>
+              <li><a href="servicios.html#seguridad-perimetral">Seguridad Perimetral</a></li>
+              <li><a href="servicios.html#monitoreo-seguimiento">Monitoreo y Seguimiento</a></li>
+              <li><a href="servicios.html">Ver todos los servicios</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Empresa</h5>
+            <ul>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#mision">Misión & Visión</a></li>
+              <li><a href="#ventas">Ventas</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Atención</h5>
+            <ul>
+              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#contacto">Bolsa de Trabajo</a></li>
+              <li><a href="#contacto">Atención a Clientes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 IVACON. Todos los derechos reservados.</span>
+        <span class="footer-reg">Empresa con Permiso de Funcionamiento y Registro Federal</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios — IVACON Seguridad Privada</title>
+  <meta name="description" content="Servicios de seguridad y vigilancia integral: Guardias Intramuros, Seguridad Perimetral, Monitoreo, Análisis de Riesgos, Consultoría, Capacitación y Especialización Hospitalaria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.png" alt="IVACON" class="logo-img">
+      </a>
+
+      <nav class="nav-main" id="nav-main">
+        <ul>
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+          <li class="has-dropdown">
+            <a href="servicios.html" class="nav-link nav-dropdown-trigger">
+              Servicios
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <div class="dropdown">
+              <a href="#guardias-intramuros" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                Guardias Intramuros
+              </a>
+              <a href="#seguridad-perimetral" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                </span>
+                Seguridad Perimetral
+              </a>
+              <a href="#monitoreo-seguimiento" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                </span>
+                Monitoreo y Seguimiento
+              </a>
+              <a href="#analisis-gestion-riesgos" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                </span>
+                Análisis y Gestión de Riesgos
+              </a>
+              <a href="#consultoria" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </span>
+                Consultoría
+              </a>
+              <a href="#capacitacion" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </span>
+                Capacitación
+              </a>
+              <a href="#hospitalario-residencial" class="dropdown-item">
+                <span class="dropdown-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+                </span>
+                Especialización Hospitalaria y Residencial
+              </a>
+            </div>
+          </li>
+          <li><a href="index.html#mision" class="nav-link">Misión</a></li>
+          <li><a href="index.html#ventas" class="nav-link">Ventas</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a href="index.html#contacto" class="btn-header-cta">Solicitar Servicio</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="section-label reveal-fade">Nuestros Servicios</div>
+        <h1 class="page-hero-title reveal-up">Servicios de Seguridad<br>y Vigilancia Integral</h1>
+        <p class="page-hero-desc reveal-fade" data-delay="100">
+          La protección de cada inmueble, de las personas que lo habitan y de los activos que resguarda, es el núcleo de nuestra razón de ser. Diseñamos soluciones de seguridad a medida, combinando talento humano de élite con tecnología de vanguardia.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES DETAIL ============ -->
+  <section class="services">
+    <div class="container">
+
+      <!-- SERVICE 1: GUARDIAS INTRAMUROS -->
+      <div id="guardias-intramuros" class="service-row service-row--left">
+        <div class="service-img-col reveal-left">
+          <div class="service-img-wrap">
+            <img src="assets/images/services/guardias-intramuros.png" alt="Guardias Intramuros IVACON" loading="lazy">
+            <div class="service-img-overlay"></div>
+          </div>
+        </div>
+        <div class="service-content-col">
+          <div class="service-num reveal-fade">01</div>
+          <h3 class="service-title reveal-up">Guardias<br>Intramuros</h3>
+          <p class="service-desc reveal-fade" data-delay="100">
+            Personal especializado y adaptado a cada cliente, capacitado para resguardar el interior del inmueble, detectar amenazas con precisión y neutralizarlas antes de que comprometan la seguridad de personas y bienes.
+          </p>
+          <ul class="service-features reveal-fade" data-delay="200">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Protección interior del inmueble
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Personal adaptado a cada operación
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Detección y neutralización de amenazas
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Resguardo integral de personas y activos
+            </li>
+          </ul>
+          <a href="index.html#contacto" class="btn-service reveal-fade" data-delay="300">
+            Solicitar Guardias Intramuros
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- SERVICE 2: SEGURIDAD PERIMETRAL -->
+      <div id="seguridad-perimetral" class="service-row service-row--right">
+        <div class="service-content-col">
+          <div class="service-num reveal-fade">02</div>
+          <h3 class="service-title reveal-up">Seguridad<br>Perimetral</h3>
+          <p class="service-desc reveal-fade" data-delay="100">
+            La primera línea de defensa de su inmueble. Neutralizamos accesos no autorizados y amenazas externas desde el perímetro, garantizando la continuidad operativa y la confianza de quienes habitan o transitan el espacio.
+          </p>
+          <ul class="service-features reveal-fade" data-delay="200">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Primera línea de defensa
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Control de accesos no autorizados
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Protección ante amenazas externas
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Continuidad operativa del inmueble
+            </li>
+          </ul>
+          <a href="index.html#contacto" class="btn-service reveal-fade" data-delay="300">
+            Solicitar Seguridad Perimetral
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="service-img-col reveal-right">
+          <div class="service-img-wrap">
+            <img src="assets/images/services/seguridad-perimetral.jpg" alt="Seguridad Perimetral IVACON" loading="lazy">
+            <div class="service-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICE 3: MONITOREO Y SEGUIMIENTO -->
+      <div id="monitoreo-seguimiento" class="service-row service-row--left">
+        <div class="service-img-col reveal-left">
+          <div class="service-img-wrap">
+            <img src="assets/images/services/monitoreo-seguimiento.jpg" alt="Monitoreo y Seguimiento IVACON" loading="lazy">
+            <div class="service-img-overlay"></div>
+          </div>
+        </div>
+        <div class="service-content-col">
+          <div class="service-num reveal-fade">03</div>
+          <h3 class="service-title reveal-up">Monitoreo y<br>Seguimiento</h3>
+          <p class="service-desc reveal-fade" data-delay="100">
+            Vigilancia proactiva y continua de toda la actividad en el inmueble. Mediante sistemas de inteligencia de seguridad (SIEM) y analistas especializados, identificamos y respondemos a incidentes en tiempo real, minimizando impactos y garantizando la integridad del sitio.
+          </p>
+          <ul class="service-features reveal-fade" data-delay="200">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Vigilancia continua y proactiva
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Monitoreo con inteligencia de seguridad
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Identificación temprana de incidentes
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Respuesta inmediata ante amenazas
+            </li>
+          </ul>
+          <a href="index.html#contacto" class="btn-service reveal-fade" data-delay="300">
+            Solicitar Monitoreo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- SERVICE 4: ANÁLISIS Y GESTIÓN DE RIESGOS -->
+      <div id="analisis-gestion-riesgos" class="service-row service-row--right">
+        <div class="service-content-col">
+          <div class="service-num reveal-fade">04</div>
+          <h3 class="service-title reveal-up">Análisis y Gestión<br>de Riesgos</h3>
+          <p class="service-desc reveal-fade" data-delay="100">
+            Identificamos y evaluamos proactivamente las vulnerabilidades que afectan al inmueble. Priorizamos riesgos, implementamos controles y planes de acción estratégicos que protegen los activos y garantizan la resiliencia operativa de forma continua.
+          </p>
+          <ul class="service-features reveal-fade" data-delay="200">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Identificación de vulnerabilidades
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Evaluación estratégica de amenazas
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Priorización de riesgos críticos
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Planes de mitigación y control
+            </li>
+          </ul>
+          <a href="index.html#contacto" class="btn-service reveal-fade" data-delay="300">
+            Solicitar Análisis de Riesgos
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="service-img-col reveal-right">
+          <div class="service-img-wrap">
+            <img src="assets/images/services/analisis-gestion-riesgos.jpg" alt="Análisis y Gestión de Riesgos IVACON" loading="lazy">
+            <div class="service-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICE 5: CONSULTORÍA -->
+      <div id="consultoria" class="service-row service-row--left">
+        <div class="service-img-col reveal-left">
+          <div class="service-img-wrap">
+            <img src="assets/images/services/consultoria.jpg" alt="Consultoría IVACON" loading="lazy">
+            <div class="service-img-overlay"></div>
+          </div>
+        </div>
+        <div class="service-content-col">
+          <div class="service-num reveal-fade">05</div>
+          <h3 class="service-title reveal-up">Consultoría<br>en Seguridad</h3>
+          <p class="service-desc reveal-fade" data-delay="100">
+            Evaluamos su inmueble para detectar vulnerabilidades críticas y elaboramos un plan estratégico con soluciones técnicas y mejores prácticas. Nuestros expertos le entregan recomendaciones precisas y un plan de acción ejecutable, sea implementado por IVACON o por su propio equipo.
+          </p>
+          <ul class="service-features reveal-fade" data-delay="200">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Diagnóstico integral del inmueble
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Detección de vulnerabilidades críticas
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Plan estratégico y recomendaciones
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Soluciones técnicas y operativas
+            </li>
+          </ul>
+          <a href="index.html#contacto" class="btn-service reveal-fade" data-delay="300">
+            Solicitar Consultoría
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- SERVICE 6: CAPACITACIÓN -->
+      <div id="capacitacion" class="service-row service-row--right">
+        <div class="service-content-col">
+          <div class="service-num reveal-fade">06</div>
+          <h3 class="service-title reveal-up">Capacitación<br>y Entrenamiento</h3>
+          <p class="service-desc reveal-fade" data-delay="100">
+            Transformamos a su personal en la primera línea de defensa del inmueble. Mediante cursos prácticos simulamos amenazas reales —robo, incendio y más— y complementamos la formación con clases teóricas en derechos humanos, atención al cliente y liderazgo, fortaleciendo la cultura de seguridad desde adentro.
+          </p>
+          <ul class="service-features reveal-fade" data-delay="200">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Simulación de amenazas reales
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Entrenamiento práctico de respuesta
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Formación teórica y humana
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Fortalecimiento de la cultura de seguridad
+            </li>
+          </ul>
+          <a href="index.html#contacto" class="btn-service reveal-fade" data-delay="300">
+            Solicitar Capacitación
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="service-img-col reveal-right">
+          <div class="service-img-wrap">
+            <img src="assets/images/services/capacitacion.png" alt="Capacitación IVACON" loading="lazy">
+            <div class="service-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVICE 7: ESPECIALIZACIÓN HOSPITALARIA Y RESIDENCIAL -->
+      <div id="hospitalario-residencial" class="service-row service-row--left">
+        <div class="service-img-col reveal-left">
+          <div class="service-img-wrap">
+            <img src="assets/images/services/hospitalario-residencial.jpg" alt="Alta Especialización Hospitalaria y Residencial IVACON" loading="lazy">
+            <div class="service-img-overlay"></div>
+          </div>
+        </div>
+        <div class="service-content-col">
+          <div class="service-num reveal-fade">07</div>
+          <h3 class="service-title reveal-up">Alta Especialización<br>Hospitalaria y Residencial</h3>
+          <p class="service-desc reveal-fade" data-delay="100">
+            Combinamos la máxima discreción con protocolos adaptados a la protección de pacientes y residentes. Implementamos vigilancia humana y tecnológica que respeta la privacidad y tranquilidad de estos espacios sensibles, garantizando un entorno seguro y sereno para personas y bienes.
+          </p>
+          <ul class="service-features reveal-fade" data-delay="200">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Protocolos para espacios sensibles
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Protección de pacientes y residentes
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Discreción y vigilancia especializada
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Seguridad humana y tecnológica
+            </li>
+          </ul>
+          <a href="index.html#contacto" class="btn-service reveal-fade" data-delay="300">
+            Solicitar Servicio Especializado
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="ventas-banner">
+    <div class="container">
+      <div class="ventas-inner reveal-up">
+        <div class="ventas-content">
+          <div class="section-label" style="color: rgba(254,254,254,0.5);">Área Comercial</div>
+          <h2 class="ventas-title">¿Listo para proteger<br>lo que más importa?</h2>
+          <p>Contáctenos para recibir una cotización personalizada sin costo. Nuestro equipo diseñará el plan de seguridad ideal para su empresa o proyecto.</p>
+        </div>
+        <div class="ventas-actions">
+          <a href="tel:+525500000000" class="btn-ventas-phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            Llamar Ahora
+          </a>
+          <a href="index.html#contacto" class="btn-ventas-form">Enviar Solicitud</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo logo--footer">
+            <div class="logo-mark">I</div>
+            <div class="logo-text">
+              <span class="logo-name">IVACON</span>
+              <span class="logo-tagline">Seguridad Privada</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Especialistas en seguridad privada integral. Más de 40 años protegiendo personas, empresas e instituciones en México.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Servicios</h5>
+            <ul>
+              <li><a href="#guardias-intramuros">Guardias Intramuros</a></li>
+              <li><a href="#seguridad-perimetral">Seguridad Perimetral</a></li>
+              <li><a href="#monitoreo-seguimiento">Monitoreo y Seguimiento</a></li>
+              <li><a href="#analisis-gestion-riesgos">Análisis de Riesgos</a></li>
+              <li><a href="#consultoria">Consultoría</a></li>
+              <li><a href="#capacitacion">Capacitación</a></li>
+              <li><a href="#hospitalario-residencial">Esp. Hospitalaria</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Empresa</h5>
+            <ul>
+              <li><a href="index.html#nosotros">Nosotros</a></li>
+              <li><a href="index.html#mision">Misión &amp; Visión</a></li>
+              <li><a href="index.html#ventas">Ventas</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Atención</h5>
+            <ul>
+              <li><a href="index.html#contacto">Contacto</a></li>
+              <li><a href="index.html#contacto">Bolsa de Trabajo</a></li>
+              <li><a href="index.html#contacto">Atención a Clientes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 IVACON. Todos los derechos reservados.</span>
+        <span class="footer-reg">Empresa con Permiso de Funcionamiento y Registro Federal</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
