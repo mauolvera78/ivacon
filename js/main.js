@@ -329,173 +329,41 @@
 
 
 /* =============================================
-   9. HERO RIGHT — Parallax + Radar + Particles
+   9. HERO RIGHT — Mouse parallax on tiger
    ============================================= */
 (function initHeroParallax() {
-  const hero   = document.querySelector('.hero');
-  const layerA = document.getElementById('hr-layer-a');
-  const layerB = document.getElementById('hr-layer-b');
-  const layerC = document.getElementById('hr-layer-c');
-  if (!hero || !layerA) return;
+  const hero  = document.querySelector('.hero');
+  if (!hero) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const panel    = document.getElementById('hero-right');
-  const tags     = panel ? Array.from(panel.querySelectorAll('.hr-tag'))        : [];
-  const nodes    = panel ? Array.from(panel.querySelectorAll('.hr-node'))       : [];
-  const svgLines = panel ? Array.from(panel.querySelectorAll('.hr-lines line')) : [];
-
-  /* ---- Particle canvas (created dynamically) ---- */
-  let pCtx = null;
-  const PW = 440, PH = 440;
-  const particles = [];
-  if (panel) {
-    const pc = document.createElement('canvas');
-    pc.width  = PW; pc.height = PH;
-    pc.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:5;border-radius:28px;';
-    panel.appendChild(pc);
-    pCtx = pc.getContext('2d');
-    for (let i = 0; i < 42; i++) {
-      particles.push({
-        x:  Math.random() * PW,
-        y:  Math.random() * PH,
-        vx: (Math.random() - 0.5) * 0.32,
-        vy: (Math.random() - 0.5) * 0.32,
-        r:  Math.random() * 1.2 + 0.4,
-        a:  Math.random() * 0.37 + 0.18,
-      });
-    }
-  }
-
-  /* ---- Radar detection ---- */
-  const SWEEP_MS    = 3500;
-  const NODE_ANGLES = [130, 293, 43]; // CSS sweep degrees per node
+  const panel = document.getElementById('hero-right');
+  if (!panel) return;
 
   let targetX = 0, targetY = 0, targetRX = 0, targetRY = 0;
   let pX = 0, pY = 0, rX = 0, rY = 0;
-  let aX = 0, aY = 0, bX = 0, bY = 0, cX = 0, cY = 0;
-  let rafId       = null;
-  let lastAngle   = -1;
-  let cooldown    = [false, false, false];
-  let panelActive = false;
-  let detTimers   = [];
+  let rafId = null;
 
-  function sweepPassed(from, to, target) {
-    return to >= from ? (target >= from && target < to)
-                      : (target >= from || target < to);
-  }
-
-  function triggerNodePing(i) {
-    if (cooldown[i]) return;
-    cooldown[i] = true;
-    if (nodes[i]) {
-      nodes[i].classList.remove('hr-node--detected');
-      void nodes[i].offsetWidth;
-      nodes[i].classList.add('hr-node--detected');
-    }
-    const ln = svgLines[i];
-    if (ln) {
-      ln.style.transition = 'opacity 0.1s ease';
-      ln.style.opacity = '1';
-      detTimers.push(setTimeout(() => {
-        ln.style.transition = 'opacity 1.2s ease';
-        ln.style.opacity = '0';
-      }, 320));
-    }
-    detTimers.push(setTimeout(() => {
-      cooldown[i] = false;
-      if (nodes[i]) nodes[i].classList.remove('hr-node--detected');
-    }, 900));
-  }
-
-  function activateLabels() {
-    tags.forEach((tag, i) => {
-      detTimers.push(setTimeout(() => tag.classList.add('hr-tag--active'), i * 220));
-    });
-  }
-
-  function clearDetections() {
-    detTimers.forEach(clearTimeout); detTimers = [];
-    tags.forEach(t  => t.classList.remove('hr-tag--active'));
-    nodes.forEach(n => n.classList.remove('hr-node--detected'));
-    svgLines.forEach(l => { l.style.transition = 'opacity 0.5s ease'; l.style.opacity = '0'; });
-    cooldown    = [false, false, false];
-    lastAngle   = -1;
-    panelActive = false;
-  }
-
-  /* ---- Mouse events ---- */
   hero.addEventListener('mousemove', (e) => {
     if (window.innerWidth < 1100) return;
     const rect = hero.getBoundingClientRect();
     const nx = (e.clientX - rect.left) / rect.width  - 0.5;
     const ny = (e.clientY - rect.top)  / rect.height - 0.5;
-    targetX  =  nx * 26;  targetY  =  ny * 16;
-    targetRX = -ny *  5;  targetRY =  nx *  6;
+    targetX  =  nx * 18;  targetY  =  ny * 10;
+    targetRX = -ny *  4;  targetRY =  nx *  5;
   });
   hero.addEventListener('mouseleave', () => {
     targetX = 0; targetY = 0; targetRX = 0; targetRY = 0;
   });
 
-  if (panel) {
-    panel.addEventListener('mouseenter', () => {
-      if (window.innerWidth >= 1100) { panelActive = true; activateLabels(); }
-    });
-    panel.addEventListener('mouseleave', clearDetections);
-  }
-
-  /* ---- RAF loop ---- */
   function lerp(a, b, t) { return a + (b - a) * t; }
 
-  function animate(ts) {
-    /* Parallax */
-    pX = lerp(pX, targetX,  0.06);  pY = lerp(pY, targetY,  0.06);
-    rX = lerp(rX, targetRX, 0.055); rY = lerp(rY, targetRY, 0.055);
-    if (panel) panel.style.transform =
-      `perspective(700px) translateY(-50%) translate(${pX}px,${pY}px) rotateX(${rX}deg) rotateY(${rY}deg)`;
-    aX = lerp(aX, targetX * 0.3, 0.065); aY = lerp(aY, targetY * 0.3, 0.065);
-    bX = lerp(bX, targetX * 0.6, 0.065); bY = lerp(bY, targetY * 0.6, 0.065);
-    cX = lerp(cX, targetX * 1.0, 0.065); cY = lerp(cY, targetY * 1.0, 0.065);
-    layerA.style.transform = `translate(${aX}px, ${aY}px)`;
-    if (layerB) layerB.style.transform = `translate(${bX}px, ${bY}px)`;
-    if (layerC) layerC.style.transform = `translate(${cX}px, ${cY}px)`;
-
-    /* Radar node detection */
-    if (panelActive) {
-      const angle = (ts % SWEEP_MS) / SWEEP_MS * 360;
-      if (lastAngle >= 0) {
-        NODE_ANGLES.forEach((na, i) => { if (sweepPassed(lastAngle, angle, na)) triggerNodePing(i); });
-      }
-      lastAngle = angle;
-    }
-
-    /* Particles + scanline */
-    if (pCtx) {
-      pCtx.clearRect(0, 0, PW, PH);
-      const dx = pX * 0.09, dy = pY * 0.09;
-
-      // Particles
-      for (const p of particles) {
-        p.x = (p.x + p.vx + dx + PW) % PW;
-        p.y = (p.y + p.vy + dy + PH) % PH;
-        pCtx.beginPath();
-        pCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        pCtx.fillStyle = `rgba(201,172,0,${p.a})`;
-        pCtx.fill();
-      }
-
-      // Scanline — horizontal bar sweeping top→bottom, ~8s cycle
-      const SCAN_PERIOD = 8000;
-      const scanY = (ts % SCAN_PERIOD) / SCAN_PERIOD * (PH + 60) - 30;
-      const sg = pCtx.createLinearGradient(0, scanY - 18, 0, scanY + 18);
-      sg.addColorStop(0,   'rgba(255,255,255,0)');
-      sg.addColorStop(0.4, 'rgba(255,255,255,0.055)');
-      sg.addColorStop(0.5, 'rgba(255,255,255,0.11)');
-      sg.addColorStop(0.6, 'rgba(255,255,255,0.055)');
-      sg.addColorStop(1,   'rgba(255,255,255,0)');
-      pCtx.fillStyle = sg;
-      pCtx.fillRect(0, scanY - 18, PW, 36);
-    }
-
+  function animate() {
+    pX = lerp(pX, targetX,  0.06);
+    pY = lerp(pY, targetY,  0.06);
+    rX = lerp(rX, targetRX, 0.055);
+    rY = lerp(rY, targetRY, 0.055);
+    panel.style.transform =
+      `perspective(900px) translateY(-50%) translate(${pX}px,${pY}px) rotateX(${rX}deg) rotateY(${rY}deg)`;
     rafId = requestAnimationFrame(animate);
   }
 

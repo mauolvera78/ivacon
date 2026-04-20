@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,13 +39,7 @@
                 </span>
                 Guardias Intramuros
               </a>
-              <a href="servicios.html#guardias-intramuros" class="dropdown-item">
-                <span class="dropdown-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-                </span>
-                Seguridad Perimetral
-              </a>
-              <a href="servicios.html#seguridad-perimetral" class="dropdown-item">
+              <a href="servicios.html#monitoreo-seguimiento" class="dropdown-item">
                 <span class="dropdown-icon">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
                 </span>
@@ -68,17 +63,10 @@
                 </span>
                 Capacitación
               </a>
-              <a href="servicios.html#hospitalario-residencial" class="dropdown-item">
-                <span class="dropdown-icon">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
-                </span>
-                Especialización Hospitalaria y Residencial
-              </a>
             </div>
           </li>
           <li><a href="#mision" class="nav-link">Misión</a></li>
           <li><a href="#ventas" class="nav-link">Ventas</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
       </nav>
 
@@ -99,6 +87,11 @@
     <div class="hero-vbg" id="hero-vbg" aria-hidden="true">
       <img src="assets/images/hero-bg.png" alt="" class="hero-bg-img" draggable="false">
     </div>
+
+    <!-- 1b. VIDEO BACKGROUND -->
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+      <source src="assets/video/hero-tigre.mp4" type="video/mp4">
+    </video>
 
     <!-- 2. OVERLAY STACK — gradient depth layers -->
     <div class="hero-overlays" aria-hidden="true">
@@ -164,51 +157,8 @@
 
     </div>
 
-    <!-- 4b. HERO RIGHT — Abstract security composition -->
-    <div class="hero-right" id="hero-right" aria-hidden="true">
-
-      <!-- Glass panel background -->
-      <div class="hr-glass"></div>
-
-      <!-- Floating wrapper — CSS animation -->
-      <div class="hr-float">
-
-        <!-- Layer A: outer orbit (slowest parallax depth) -->
-        <div class="hr-parallax" id="hr-layer-a">
-          <div class="hr-ring hr-ring--outer"></div>
-          <div class="hr-node hr-node--1"></div>
-          <div class="hr-node hr-node--2"></div>
-          <div class="hr-node hr-node--3"></div>
-        </div>
-
-        <!-- Layer B: mid ring + radar sweep + lines (medium depth) -->
-        <div class="hr-parallax" id="hr-layer-b">
-          <div class="hr-ring hr-ring--mid"></div>
-          <div class="hr-scan"></div>
-          <svg class="hr-lines" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="220" y1="220" x2="404" y2="67"  stroke="rgba(158,135,0,0.22)" stroke-width="0.8" stroke-dasharray="4 7"/>
-            <line x1="220" y1="220" x2="27"  y2="300" stroke="rgba(158,135,0,0.22)" stroke-width="0.8" stroke-dasharray="4 7"/>
-            <line x1="220" y1="220" x2="360" y2="369" stroke="rgba(158,135,0,0.22)" stroke-width="0.8" stroke-dasharray="4 7"/>
-          </svg>
-        </div>
-
-        <!-- Layer C: inner ring + core nucleus (fastest depth) -->
-        <div class="hr-parallax" id="hr-layer-c">
-          <div class="hr-ring hr-ring--inner"></div>
-          <div class="hr-core">
-            <div class="hr-core-ring"></div>
-            <div class="hr-core-dot"></div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Data tags -->
-      <div class="hr-tag hr-tag--1"><span class="hr-tag-dot"></span><span>Análisis constante del entorno</span></div>
-      <div class="hr-tag hr-tag--2"><span class="hr-tag-dot"></span><span>Prevención de incidentes</span></div>
-      <div class="hr-tag hr-tag--3"><span class="hr-tag-dot"></span><span>Acción inmediata en campo</span></div>
-
-    </div>
+    <!-- 4b. HERO RIGHT — Tiger visual -->
+    <div class="hero-right hero-visual" id="hero-right" aria-hidden="true"></div>
 
     <!-- 5. STATUS CHIP — top-right floating -->
     <div class="hero-status-chip">
@@ -235,8 +185,6 @@
       <span class="marquee-dot">·</span>
       <span>Custodia</span>
       <span class="marquee-dot">·</span>
-      <span>Seguridad Perimetral</span>
-      <span class="marquee-dot">·</span>
       <span>Protección VIP</span>
       <span class="marquee-dot">·</span>
       <span>Disponibilidad Inmediata</span>
@@ -251,8 +199,6 @@
       <span>Escoltas Tácticos</span>
       <span class="marquee-dot">·</span>
       <span>Custodia</span>
-      <span class="marquee-dot">·</span>
-      <span>Seguridad Perimetral</span>
       <span class="marquee-dot">·</span>
       <span>Protección VIP</span>
       <span class="marquee-dot">·</span>
@@ -288,15 +234,15 @@
 
         <div class="about-content">
           <div class="section-label reveal-fade">Quiénes Somos</div>
-          <h2 class="section-title reveal-up">Expertos con más de<br><span class="gold">40 años</span> en el campo</h2>
+          <h2 class="section-title reveal-up">Experiencia que respalda<br>cada operación crítica</h2>
           <p class="body-text reveal-fade" data-delay="100">
-            Los socios y directivos de IVACON cuentan con una amplia experiencia de más de 40 años en Seguridad Pública y Privada Integral, en la modalidad de Intramuros y Extramuros, tanto en el sector público como en el privado.
+            Los socios y directivos de IVACON cuentan con una sólida trayectoria en Seguridad Pública y Privada Integral, con experiencia en operaciones intramuros y extramuros tanto en el sector público como privado.
           </p>
           <p class="body-text reveal-fade" data-delay="200">
-            Contamos con Permiso de Funcionamiento y Registro Federal y todos los registros requeridos por las autoridades correspondientes, con cobertura para toda la Ciudad de México, área metropolitana y Estados en el Interior de la República Mexicana.
+            Operamos bajo cumplimiento normativo federal y estatal, con cobertura en Ciudad de México, área metropolitana y distintos estados de la República Mexicana, garantizando respaldo legal y operativo en cada servicio.
           </p>
           <p class="body-text reveal-fade" data-delay="300">
-            Nuestro personal cuenta con todas sus prestaciones de ley, es investigado y registrado ante la Secretaría de Seguridad Pública Federal, y pasa por rigurosos exámenes médicos, físicos y psicométricos para garantizar solo los mejores elementos.
+            Nuestro personal está debidamente registrado y cumple con estrictos procesos de selección, incluyendo evaluaciones médicas, físicas y psicométricas, asegurando elementos altamente capacitados y confiables.
           </p>
           <div class="about-pillars reveal-fade" data-delay="400">
             <div class="pillar">
@@ -374,27 +320,13 @@
           </div>
         </a>
 
-        <a href="servicios.html#seguridad-perimetral" class="svc-card svc-card--tall">
-          <div class="svc-card-img">
-            <img src="assets/images/services/seguridad-perimetral.jpg" alt="Seguridad Perimetral" loading="lazy">
-          </div>
-          <div class="svc-card-overlay"></div>
-          <div class="svc-card-body">
-            <span class="svc-card-num">02</span>
-            <h3 class="svc-card-title">Seguridad<br>Perimetral</h3>
-            <span class="svc-card-arrow" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <a href="servicios.html#monitoreo-seguimiento" class="svc-card">
+        <a href="servicios.html#monitoreo-seguimiento" class="svc-card svc-card--tall">
           <div class="svc-card-img">
             <img src="assets/images/services/monitoreo-seguimiento.jpg" alt="Monitoreo y Seguimiento" loading="lazy">
           </div>
           <div class="svc-card-overlay"></div>
           <div class="svc-card-body">
-            <span class="svc-card-num">03</span>
+            <span class="svc-card-num">02</span>
             <h3 class="svc-card-title">Monitoreo y<br>Seguimiento</h3>
             <span class="svc-card-arrow" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -408,7 +340,7 @@
           </div>
           <div class="svc-card-overlay"></div>
           <div class="svc-card-body">
-            <span class="svc-card-num">04</span>
+            <span class="svc-card-num">03</span>
             <h3 class="svc-card-title">Análisis y Gestión<br>de Riesgos</h3>
             <span class="svc-card-arrow" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -416,19 +348,34 @@
           </div>
         </a>
 
-        <a href="servicios.html#hospitalario-residencial" class="svc-card">
+        <a href="servicios.html#consultoria" class="svc-card">
           <div class="svc-card-img">
-            <img src="assets/images/services/hospitalario-residencial.jpg" alt="Especialización Hospitalaria y Residencial" loading="lazy">
+            <img src="assets/images/services/consultoria.jpg" alt="Consultoría en Seguridad" loading="lazy">
           </div>
           <div class="svc-card-overlay"></div>
           <div class="svc-card-body">
-            <span class="svc-card-num">07</span>
-            <h3 class="svc-card-title">Especialización<br>Hospitalaria y Residencial</h3>
+            <span class="svc-card-num">04</span>
+            <h3 class="svc-card-title">Consultoría<br>en Seguridad</h3>
             <span class="svc-card-arrow" aria-hidden="true">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </div>
         </a>
+
+        <a href="servicios.html#capacitacion" class="svc-card">
+          <div class="svc-card-img">
+            <img src="assets/images/services/capacitacion.png" alt="Capacitación y Entrenamiento" loading="lazy">
+          </div>
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-body">
+            <span class="svc-card-num">05</span>
+            <h3 class="svc-card-title">Capacitación<br>y Entrenamiento</h3>
+            <span class="svc-card-arrow" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -438,7 +385,7 @@
     <div class="mv-grid">
       <div class="mv-card mv-card--mission reveal-left">
         <div class="mv-img-wrap">
-          <img src="./assets/img/mision.png" alt="Misión IVACON">
+          <img src="./assets/img/mision.jpg" alt="Misión IVACON" style="object-position: center;">
           <div class="mv-img-overlay"></div>
         </div>
         <div class="mv-card-content">
@@ -462,10 +409,7 @@
           <div class="mv-label">02 — Visión</div>
           <h3 class="mv-title">El nuevo estándar<br>de seguridad</h3>
           <p class="mv-text">
-            Crear un nuevo estándar de seguridad en México, que nos posicione dentro de las mejores empresas a nivel nacional, con la mayor calidad y avance tecnológico.
-          </p>
-          <p class="mv-text">
-            Continuar otorgando seguridad y satisfacción a nuestros clientes, con la capacitación continua de nuestro personal y de los elementos tecnológicos auxiliares.
+            Establecer un estándar superior en seguridad privada en México, a través de soluciones integrales que combinan tecnología, inteligencia operativa y mejora continua, posicionándonos como un referente en calidad, confianza y eficiencia.
           </p>
         </div>
       </div>
@@ -575,38 +519,15 @@
       <div class="cert-grid">
 
         <!-- REPSE -->
-        <div class="cert-card reveal-up" data-cert="repse" data-delay="50">
+        <div class="cert-card cert-card--logo reveal-up" data-cert="repse" data-delay="50">
           <div class="cert-sweep"></div>
-          <div class="cert-icon-wrap">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10 9 9 9 8 9"/>
-            </svg>
-          </div>
-          <span class="cert-badge">REPSE</span>
-          <h3 class="cert-title">REPSE</h3>
-          <p class="cert-desc">Registro vigente que respalda la operación formal y regulada de nuestros servicios especializados.</p>
-          <div class="cert-link-slot" aria-hidden="true"></div>
+          <img src="./assets/Legalidad/Repse.png" alt="REPSE" class="cert-logo-img">
         </div>
 
         <!-- AMESP -->
-        <a href="assets/docs/amesp.JPEG" target="_blank" rel="noopener" class="cert-card cert-card--link reveal-up" data-cert="amesp" data-delay="130">
+        <a href="assets/docs/amesp.JPEG" target="_blank" rel="noopener" class="cert-card cert-card--link cert-card--logo reveal-up" data-cert="amesp" data-delay="130">
           <div class="cert-sweep"></div>
-          <div class="cert-icon-wrap">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <rect x="2" y="7" width="20" height="14" rx="2"/>
-              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
-              <line x1="12" y1="12" x2="12" y2="16"/>
-              <line x1="10" y1="14" x2="14" y2="14"/>
-            </svg>
-          </div>
-          <span class="cert-badge">AMESP</span>
-          <h3 class="cert-title">AMESP</h3>
-          <p class="cert-desc">Afiliación a organismo reconocido del sector, reforzando confianza, respaldo institucional y buenas prácticas.</p>
-          <div class="cert-link-slot" aria-hidden="true"></div>
+          <img src="./assets/Legalidad/amesp.png" alt="AMESP" class="cert-logo-img">
         </a>
 
         <!-- Permiso Federal -->
@@ -649,8 +570,8 @@
       <div class="ventas-inner">
         <div class="ventas-content">
           <div class="section-label reveal-fade" style="color: rgba(254,254,254,0.5);">Área Comercial</div>
-          <h2 class="ventas-title reveal-up" data-delay="80">¿Listo para proteger<br>lo que más importa?</h2>
-          <p class="reveal-fade" data-delay="200">Contáctenos para recibir una cotización personalizada sin costo. Nuestro equipo de ventas está disponible para diseñar el plan de seguridad ideal para su empresa o proyecto.</p>
+          <h2 class="ventas-title reveal-up" data-delay="80">Control, prevención y respuesta<br>en un solo sistema</h2>
+          <p class="reveal-fade" data-delay="200">Protegemos operaciones críticas con soluciones diseñadas para actuar antes, durante y después de cualquier amenaza. Nuestro enfoque integra inteligencia, capacidad operativa y tecnología para garantizar continuidad, control y seguridad en todo momento.</p>
         </div>
         <div class="ventas-actions reveal-fade" data-delay="300">
           <a href="tel:+525500000000" class="btn-ventas-phone">
@@ -777,7 +698,7 @@
             <img src="assets/img/logo.png" alt="IVACON" class="footer-logo-img">
           </a>
           <p class="footer-desc">
-            Especialistas en seguridad privada integral. Más de 40 años protegiendo personas, empresas e instituciones en México.
+            Soluciones integrales de seguridad privada con enfoque estratégico, operativo y tecnológico, diseñadas para proteger activos críticos con máxima eficiencia.
           </p>
           <div class="footer-contact-info">
             <div class="footer-contact-row">
@@ -795,7 +716,6 @@
             <h5>Servicios</h5>
             <ul>
               <li><a href="servicios.html#guardias-intramuros">Guardias Intramuros</a></li>
-              <li><a href="servicios.html#seguridad-perimetral">Seguridad Perimetral</a></li>
               <li><a href="servicios.html#monitoreo-seguimiento">Monitoreo y Seguimiento</a></li>
               <li><a href="servicios.html">Ver todos los servicios</a></li>
             </ul>
