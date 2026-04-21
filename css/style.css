@@ -12,7 +12,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17.5px;
 }
 
 body {
@@ -317,7 +317,7 @@ button {
   align-items: center;
   gap: 5px;
   padding: 8px 14px;
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   color: rgba(254, 254, 254, 0.75);
@@ -653,7 +653,7 @@ button {
 }
 
 .hero-eyebrow span:last-child {
-  font-size: 0.7rem;
+  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2787,7 +2787,7 @@ button {
 }
 
 header .logo-img {
-  height: 36px !important;
+  height: 62px !important;
   width: auto;
   display: block;
 }
@@ -3035,6 +3035,147 @@ header .logo-img {
 .cert-link-slot {
   margin-top: 20px;
   height: 0;
+}
+
+/* ============ SECTORES ============ */
+.sectores-section {
+  background: #ffffff;
+  padding: 96px 0;
+}
+
+.sectores-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+.sectores-header .section-label {
+  justify-content: center;
+}
+
+.sectores-header .section-title {
+  margin-bottom: 16px;
+}
+
+.sectores-subtitle {
+  font-size: 1rem;
+  color: var(--gray-text);
+  line-height: 1.7;
+}
+
+.sectores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.sector-card {
+  background: #ffffff;
+  border: 1px solid rgba(32, 29, 29, 0.08);
+  border-radius: 20px;
+  padding: 36px 28px 32px;
+  box-shadow: 0 4px 28px -6px rgba(32, 29, 29, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: transform 0.28s var(--ease-out), box-shadow 0.28s var(--ease-out);
+}
+
+.sector-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 48px -10px rgba(32, 29, 29, 0.14);
+}
+
+.sector-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: rgba(200, 169, 106, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.sector-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: 0.01em;
+  margin-bottom: 16px;
+}
+
+.sector-bullets {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.sector-bullets li {
+  font-size: 0.875rem;
+  color: var(--gray-text);
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+
+.sector-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #C8A96A;
+  flex-shrink: 0;
+}
+
+.sector-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid rgba(200, 169, 106, 0.45);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #a07d3a;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.sector-btn:hover {
+  background: #C8A96A;
+  border-color: #C8A96A;
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .sectores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .sectores-section {
+    padding: 64px 0;
+  }
+
+  .sectores-header {
+    margin-bottom: 40px;
+  }
+
+  .sectores-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Responsive */
