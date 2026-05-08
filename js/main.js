@@ -308,7 +308,7 @@
   const el = document.getElementById('h1-rotate');
   if (!el) return;
 
-  const words = ['empresas', 'residencial', 'eventos', 'corporativos', 'instalaciones'];
+  const words = ['empresarial', 'industrias', 'corporativas', 'residencial', 'hospitalaria', 'construcciones', 'eventos'];
   let idx = 0;
 
   function rotate() {
