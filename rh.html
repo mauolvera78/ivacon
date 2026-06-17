@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Únete al equipo — IVACON Seguridad Privada</title>
-  <meta name="description" content="Forma parte del equipo IVACON. Envía tu solicitud de empleo para unirte a nuestra empresa de seguridad privada con más de 40 años de trayectoria.">
+  <title>Únete al equipo — Seguridad Privada | IVACON</title>
+  <meta name="description" content="Forma parte del equipo IVACON. Envía tu solicitud de empleo para unirte a nuestra empresa de Seguridad Privada con más de 40 años de trayectoria.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -400,7 +400,7 @@
   <header id="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="assets/img/logo.png" alt="IVACON" class="logo-img">
+        <img src="logo%20ivacon%20new.png" alt="IVACON" class="logo-img">
       </a>
 
       <nav class="nav-main" id="nav-main">
@@ -469,7 +469,7 @@
         <div class="section-label">Recursos Humanos</div>
         <h1 class="section-title">Únete al equipo<br><span class="gold">IVACON</span></h1>
         <p class="rh-hero-desc">
-          Buscamos elementos comprometidos, responsables y con vocación de servicio para formar parte de nuestro equipo de seguridad privada. Personal certificado, respaldado y con prestaciones de ley.
+          Buscamos elementos comprometidos, responsables y con vocación de servicio para formar parte de nuestro equipo de Seguridad Privada. Personal certificado, respaldado y con prestaciones de ley.
         </p>
         <div class="rh-pillars">
           <span class="rh-pillar">
@@ -563,7 +563,10 @@
           <h3 class="rh-form-title">Solicitud de empleo</h3>
           <p class="rh-form-subtitle">Completa el formulario con tus datos. Nos pondremos en contacto contigo a la brevedad.</p>
 
-          <form id="rh-form" novalidate>
+          <form id="rh-form" action="https://formsubmit.co/contacto@ivacon.com.mx" method="POST" enctype="multipart/form-data" novalidate>
+            <input type="hidden" name="_subject" value="Solicitud de empleo — IVACON">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
 
             <div class="rh-section-label">Datos personales</div>
 
@@ -676,19 +679,23 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" class="logo logo--footer">
-            <img src="assets/img/logo.png" alt="IVACON" class="footer-logo-img">
+            <img src="logo%20ivacon%20new.png" alt="IVACON" class="footer-logo-img">
           </a>
           <p class="footer-desc">
-            Soluciones integrales de seguridad privada con enfoque estratégico, operativo y tecnológico, diseñadas para proteger activos críticos con máxima eficiencia.
+            Soluciones integrales de Seguridad Privada con enfoque estratégico, operativo y tecnológico, diseñadas para proteger activos críticos con máxima eficiencia.
           </p>
           <div class="footer-contact-info">
             <div class="footer-contact-row">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-              <span>IVACON — 55 5084 1438</span>
+              <span>55 5084 1438</span>
             </div>
             <div class="footer-contact-row">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <a href="mailto:contacto@ivacon.com.mx">contacto@ivacon.com.mx</a>
+            </div>
+            <div class="footer-contact-row footer-contact-row--addr">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Parque de Orizaba No. 7 Int. 302<br>Col. El Parque<br>Naucalpan de Juárez, C.P. 53398<br>Estado de México</span>
             </div>
           </div>
         </div>
@@ -796,47 +803,31 @@
       }
 
       form.addEventListener('submit', function(e) {
-        e.preventDefault();
         clearErrors();
 
-        const nombre     = form.nombre.value.trim();
-        const telefono   = form.telefono.value.trim();
-        const email      = form.email.value.trim();
-        const puesto     = form.puesto.value;
+        const nombre      = form.nombre.value.trim();
+        const telefono    = form.telefono.value.trim();
+        const email       = form.email.value.trim();
+        const puesto      = form.puesto.value;
         const experiencia = form.experiencia.value;
         let valid = true;
 
-        if (!nombre) { showError('rh-nombre', 'Por favor ingresa tu nombre.'); valid = false; }
-        if (!telefono) { showError('rh-telefono', 'Por favor ingresa tu teléfono.'); valid = false; }
+        if (!nombre)    { showError('rh-nombre',     'Por favor ingresa tu nombre.');    valid = false; }
+        if (!telefono)  { showError('rh-telefono',   'Por favor ingresa tu teléfono.'); valid = false; }
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
           showError('rh-email', 'Ingresa un correo válido.'); valid = false;
         }
-        if (!puesto) { showError('rh-puesto', 'Selecciona un puesto.'); valid = false; }
-        if (!experiencia) { showError('rh-experiencia', 'Selecciona tu experiencia.'); valid = false; }
+        if (!puesto)      { showError('rh-puesto',      'Selecciona un puesto.');       valid = false; }
+        if (!experiencia) { showError('rh-experiencia', 'Selecciona tu experiencia.');  valid = false; }
 
-        if (!valid) return;
+        if (!valid) {
+          e.preventDefault();
+          return;
+        }
 
         btn.classList.add('loading');
-
-        const descripcion = form.descripcion ? form.descripcion.value.trim() : '';
-        const cvInput = document.getElementById('rh-cv');
-        const cvFile = (cvInput && cvInput.files && cvInput.files[0]) ? cvInput.files[0].name : '';
-        const subject = encodeURIComponent('Solicitud de empleo IVACON — ' + nombre);
-        const body = encodeURIComponent(
-          'Nombre: ' + nombre + '\n' +
-          'Teléfono: ' + telefono + '\n' +
-          'Correo: ' + email + '\n' +
-          'Puesto de interés: ' + puesto + '\n' +
-          'Experiencia: ' + experiencia + '\n' +
-          (descripcion ? '\nExperiencia detallada:\n' + descripcion + '\n' : '') +
-          (cvFile ? '\nCV adjunto: ' + cvFile + '\n(Adjuntar el archivo al responder este correo si no se envió automáticamente.)' : '\nCV: No adjuntado')
-        );
-
-        setTimeout(function() {
-          btn.classList.remove('loading');
-          btn.classList.add('done');
-          window.location.href = 'mailto:contacto@ivacon.com.mx?subject=' + subject + '&body=' + body;
-        }, 900);
+        btn.disabled = true;
+        // Form submits natively to FormSubmit.co with all fields including CV file
       });
     })();
   </script>

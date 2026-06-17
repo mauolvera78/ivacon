@@ -308,7 +308,7 @@
   const el = document.getElementById('h1-rotate');
   if (!el) return;
 
-  const words = ['empresarial', 'industrias', 'corporativos', 'residencial', 'hospitalaria', 'construcciones', 'eventos'];
+  const words = ['Empresarial', 'Industrias', 'Corporativos', 'Residencial', 'Hospitalaria', 'Construcciones', 'Eventos'];
   let idx = 0;
 
   function rotate() {
@@ -460,21 +460,40 @@
     e.preventDefault();
     if (!validateForm()) return;
 
-    // Simulate async submit
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
 
-    await new Promise(resolve => setTimeout(resolve, 1800));
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/contacto@ivacon.com.mx', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Nueva solicitud de servicio — IVACON',
+          nombre:   document.getElementById('nombre').value.trim(),
+          email:    document.getElementById('email').value.trim(),
+          empresa:  document.getElementById('empresa').value.trim(),
+          telefono: document.getElementById('telefono').value.trim(),
+          servicio: document.getElementById('servicio').value,
+          mensaje:  document.getElementById('mensaje').value.trim()
+        })
+      });
 
-    submitBtn.classList.remove('loading');
-    submitBtn.classList.add('success');
+      const json = await res.json();
+      if (json.success !== 'true' && json.success !== true) throw new Error();
 
-    // Reset after delay
-    setTimeout(() => {
-      form.reset();
-      submitBtn.classList.remove('success');
+      submitBtn.classList.remove('loading');
+      submitBtn.classList.add('success');
+      setTimeout(() => {
+        form.reset();
+        submitBtn.classList.remove('success');
+        submitBtn.disabled = false;
+      }, 4000);
+
+    } catch {
+      submitBtn.classList.remove('loading');
       submitBtn.disabled = false;
-    }, 4000);
+      alert('Error al enviar el mensaje. Por favor escríbenos directamente a contacto@ivacon.com.mx');
+    }
   });
 })();
 
@@ -582,5 +601,132 @@
       imgWrap.style.transform = '';
       imgWrap.style.transition = 'transform 0.4s ease-out';
     });
+  });
+})();
+
+
+/* =============================================
+   14. PDF MODAL VIEWER — PDF.js canvas renderer
+   ============================================= */
+(function initPdfModal() {
+  const modal      = document.getElementById('pdf-modal');
+  const titleEl    = document.getElementById('pdf-modal-title');
+  const closeBtn   = document.getElementById('pdf-modal-close');
+  const backdrop   = document.getElementById('pdf-modal-backdrop');
+  const loadingEl  = document.getElementById('pdf-loading');
+  const canvasWrap = document.getElementById('pdf-canvas-wrap');
+  const canvas     = document.getElementById('pdf-canvas');
+  const pageInfo   = document.getElementById('pdf-page-info');
+  const prevBtn    = document.getElementById('pdf-prev');
+  const nextBtn    = document.getElementById('pdf-next');
+  const modalBody  = document.getElementById('pdf-modal-body');
+  if (!modal || !canvas) return;
+
+  // Configure PDF.js worker from same CDN version
+  if (window.pdfjsLib) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  }
+
+  var pdfDoc      = null;
+  var currentPage = 1;
+  var totalPages  = 0;
+  var rendering   = false;
+
+  function getScale() {
+    // Fill ~90% of the modal body width
+    var maxW = (modalBody ? modalBody.clientWidth : 800) - 32;
+    return Math.max(1, maxW / 612); // 612pt = US Letter width
+  }
+
+  function renderPage(num) {
+    if (!pdfDoc || rendering) return;
+    rendering = true;
+
+    pdfDoc.getPage(num).then(function(page) {
+      var scale    = getScale();
+      var viewport = page.getViewport({ scale: scale });
+      var ctx      = canvas.getContext('2d');
+
+      canvas.height = viewport.height;
+      canvas.width  = viewport.width;
+
+      page.render({ canvasContext: ctx, viewport: viewport }).promise.then(function() {
+        rendering = false;
+        pageInfo.textContent = num + ' / ' + totalPages;
+        prevBtn.disabled = (num <= 1);
+        nextBtn.disabled = (num >= totalPages);
+        loadingEl.style.display  = 'none';
+        canvasWrap.style.display = 'block';
+        modalBody.scrollTop = 0;
+      });
+    }).catch(function() {
+      rendering = false;
+    });
+  }
+
+  function openModal(pdfPath, title) {
+    if (!window.pdfjsLib) {
+      alert('El visor de documentos no está disponible. Asegúrese de tener conexión a internet.');
+      return;
+    }
+
+    titleEl.textContent = title || 'Documento';
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+
+    // Reset state
+    loadingEl.style.display  = 'flex';
+    canvasWrap.style.display = 'none';
+    pageInfo.textContent     = '— / —';
+    prevBtn.disabled         = true;
+    nextBtn.disabled         = true;
+    pdfDoc      = null;
+    currentPage = 1;
+    totalPages  = 0;
+    rendering   = false;
+
+    pdfjsLib.getDocument(pdfPath).promise.then(function(pdf) {
+      pdfDoc      = pdf;
+      totalPages  = pdf.numPages;
+      renderPage(currentPage);
+    }).catch(function(err) {
+      console.warn('PDF load error:', err);
+      loadingEl.innerHTML = '<span style="color:rgba(254,254,254,.5)">No se pudo cargar el documento.</span>';
+    });
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    pdfDoc    = null;
+    rendering = false;
+    setTimeout(function() {
+      loadingEl.style.display  = 'flex';
+      canvasWrap.style.display = 'none';
+      pageInfo.textContent     = '— / —';
+      prevBtn.disabled         = true;
+      nextBtn.disabled         = true;
+    }, 250);
+  }
+
+  prevBtn.addEventListener('click', function() {
+    if (currentPage > 1) { currentPage--; renderPage(currentPage); }
+  });
+  nextBtn.addEventListener('click', function() {
+    if (currentPage < totalPages) { currentPage++; renderPage(currentPage); }
+  });
+
+  document.querySelectorAll('.cert-view-btn[data-pdf]').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal(this.dataset.pdf, this.dataset.title);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
 })();
