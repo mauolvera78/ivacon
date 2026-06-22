@@ -499,6 +499,51 @@
 
 
 /* =============================================
+   11. WHATSAPP PANEL SELECTOR
+   ============================================= */
+(function initWAPanel() {
+  const btn      = document.getElementById('wa-float-btn');
+  const panel    = document.getElementById('wa-panel');
+  const closeBtn = document.getElementById('wa-panel-close');
+  if (!btn || !panel) return;
+
+  function openPanel() {
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden', 'false');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closePanel() {
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    panel.classList.contains('open') ? closePanel() : openPanel();
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      closePanel();
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    if (!panel.contains(e.target) && e.target !== btn) {
+      closePanel();
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closePanel();
+  });
+})();
+
+
+/* =============================================
    10. BACK TO TOP BUTTON
    ============================================= */
 (function initBackToTop() {

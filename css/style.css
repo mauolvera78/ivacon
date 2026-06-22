@@ -3595,7 +3595,7 @@ header .logo-img {
 }
 
 /* ===================================================
-   WHATSAPP FLOATING BUTTON
+   WHATSAPP FLOATING BUTTON + PANEL
    =================================================== */
 .wa-float {
   position: fixed;
@@ -3607,6 +3607,8 @@ header .logo-img {
   border-radius: 50%;
   background: #25d366;
   color: #ffffff;
+  border: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3632,6 +3634,119 @@ header .logo-img {
   flex-shrink: 0;
 }
 
+/* Panel selector */
+.wa-panel {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  z-index: 949;
+  background: #ffffff;
+  border-radius: 18px;
+  width: 292px;
+  overflow: hidden;
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.18),
+    0 3px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(14px) scale(0.96);
+  pointer-events: none;
+  transition: opacity 0.22s var(--ease-out), transform 0.22s var(--ease-out);
+}
+
+.wa-panel.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.wa-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #25d366;
+  color: #ffffff;
+}
+
+.wa-panel-title {
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.wa-panel-close {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s;
+  flex-shrink: 0;
+}
+
+.wa-panel-close:hover {
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.wa-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  color: #201d1d;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(32, 29, 29, 0.07);
+  transition: background 0.18s;
+}
+
+.wa-option:last-child {
+  border-bottom: none;
+}
+
+.wa-option:hover {
+  background: rgba(37, 211, 102, 0.07);
+}
+
+.wa-option-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(37, 211, 102, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.wa-option-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wa-option-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #201d1d;
+}
+
+.wa-option-number {
+  font-size: 0.8rem;
+  color: rgba(32, 29, 29, 0.5);
+}
+
+.wa-option-arrow {
+  color: rgba(32, 29, 29, 0.22);
+  flex-shrink: 0;
+}
+
 /* evitar que tape el back-to-top en mobile */
 @media (max-width: 480px) {
   .wa-float {
@@ -3639,6 +3754,11 @@ header .logo-img {
     right: 20px;
     width: 52px;
     height: 52px;
+  }
+  .wa-panel {
+    bottom: 142px;
+    right: 20px;
+    width: calc(100vw - 40px);
   }
 }
 
@@ -3891,3 +4011,27 @@ header .logo-img         { height: 72px !important; }
 .footer-contact-row--addr          { align-items: flex-start; }
 .footer-contact-row--addr svg      { margin-top: 1px; flex-shrink: 0; }
 .footer-contact-row--addr span     { line-height: 1.65; }
+
+/* WhatsApp rows in footer */
+.footer-contact-row--wa svg        { color: #25d366; }
+.footer-wa-group                   { display: flex; flex-direction: column; gap: 1px; }
+.footer-wa-type                    { font-size: 0.7rem; color: rgba(254,254,254,0.35); line-height: 1.2; }
+.footer-wa-number                  { font-size: 0.82rem; color: rgba(254,254,254,0.55); transition: color 0.2s; }
+.footer-wa-number:hover            { color: #25d366; }
+
+/* Oficina row in footer */
+.footer-phone-group                { display: flex; flex-direction: column; gap: 1px; }
+.footer-phone-type                 { font-size: 0.7rem; color: rgba(254,254,254,0.35); line-height: 1.2; }
+.footer-phone-num                  { font-size: 0.82rem; color: rgba(254,254,254,0.55); transition: color 0.2s; }
+.footer-phone-num:hover            { color: var(--gold); }
+
+/* Cert card subtitle (Permisos Locales y Federales) */
+.cert-logo-subtitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(254, 254, 254, 0.4);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.3;
+}
